@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate, enumitem}
+\usepackage{fancyhdr, graphicx, comment, multicol}
+\usepackage[none]{hyphenat} % This command prevents hyphenation of words
+\binoppenalty=\maxdimen % This command and the next prevent in-line equation breaks
+\relpenalty=\maxdimen
+\usepackage{microtype} % Modifies spacing between letters and words
+\usepackage{mathpazo} % Modifies font. Optional package.
+\usepackage{mdframed} % Required for boxed problems.
+\usepackage{parskip} % Left justifies new paragraphs.
+\linespread{1.1} 
+\usepackage{proof}
+
+\newenvironment{problem}[1]
+{\begin{mdframed}[linewidth=0.6pt]
+        \textsc{Problem #1:}
+
+}
+    {\end{mdframed}}
+
+\newenvironment{solution}
+    {\textsc{Solution:}\\}
+    {\newpage}% puts a new page after the solution
+    
+\newenvironment{statement}[1]
+{\begin{mdframed}[linewidth=0.6pt]
+        \textsc{Statement #1:}
+
+}
+    {\end{mdframed}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+\noindent
+\textbf{MATH 502A} \hfill \textbf{Zachary Peskin} \\
+\normalsize Prof. Soto \hfill Date: \today \\
+
+\begin{center}
+\textbf{Assignment 1}
+\end{center}
+
+\begin{statement}{\#1}
+\begin{math}
+\textrm{Let }a,b\in\mathbb{R}\textrm{. Show that }\mid b\mid\leq a\textrm{ if and only if }-a\leq b\leq a\textrm .
+\end{math}
+\end{statement}
+
+\begin{proof}
+$\left(\Rightarrow\right)$: Suppose $\mid b\mid\leq a$
+
+
+
+\begin{center}
+\begin{math}
+\mid b\mid\leq a \Rightarrow b\leq a\cap b\geq-a
+\end{math}
+\end{center}
+
+
+
+Expressing the intersection as one inequality
+\begin{center}
+\begin{math}
+\Rightarrow-a\leq b\leq a
+\end{math}
+\end{center}
+
+
+
+
+
+
+
+\bigskip\bigskip
+$\left(\Leftarrow\right)$: Suppose $-a\leq b\leq a$
+
+
+
+\begin{center}
+\begin{math}
+\Rightarrow -a-b\leq0\leq a-b\Rightarrow-a-b\leq0\cap a-b\geq0
+\end{math}
+\end{center}
+
+
+
+
+
+\begin{center}
+\begin{math}
+\Rightarrow -a\leq b\cap a\geq b\Rightarrow b\leq a\cap b\geq-a
+\end{math}
+\end{center}
+
+
+Which is equal to $\mid b \mid\leq a$
+
+\end{proof}
+
+
+
+
+
+
+
+\end{document}
